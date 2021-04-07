@@ -1,3 +1,4 @@
+import 'package:conreality_menu/pages/signInPage/@sign_in_container.dart';
 import 'package:conreality_menu/pages/splashScreen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         //"loginPage": (context) => (),
-        //"signIn": (context) => (),
+        "signIn": (context) => SignInContainer(),
         //"signUp": (context) => (),
         //"forgotPassword": (context) => (),
         //"mainMenu": (context) => (),
