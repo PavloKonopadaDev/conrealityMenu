@@ -126,7 +126,7 @@ class _SignInFormState extends State<SignInForm> {
             border: InputBorder.none,
             hintText: "E-mail",
             hintStyle: TextStyle(
-              fontWeight: FontWeight.w300,
+              fontWeight: FontWeight.w900,
               color: Color(0xff4d606f),
               fontSize: ScreenUtil().setSp(32),
             ),
@@ -166,7 +166,7 @@ class _SignInFormState extends State<SignInForm> {
           border: InputBorder.none,
           hintText: "Password",
           hintStyle: TextStyle(
-            fontWeight: FontWeight.w300,
+            fontWeight: FontWeight.w900,
             color: Color(0xff4d606f),
             fontSize: ScreenUtil().setSp(32),
           ),
