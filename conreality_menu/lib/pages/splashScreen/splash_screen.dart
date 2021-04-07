@@ -10,8 +10,8 @@ class SplashScreenPage extends StatefulWidget {
 
 class _SplashScreenPageState extends State<SplashScreenPage> {
   void startTimer() {
-    Timer(Duration(seconds: 12312312), () {
-      return Navigator.of(context).popAndPushNamed("loginPage");
+    Timer(Duration(seconds: 5), () {
+      return Navigator.of(context).popAndPushNamed("signIn");
     });
   }
 
