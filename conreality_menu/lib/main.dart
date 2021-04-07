@@ -1,6 +1,8 @@
 import 'package:conreality_menu/pages/splashScreen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'pages/loginPage/loginPage.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
       home: SplashScreenPage(),
       debugShowCheckedModeBanner: false,
       routes: {
-        //"loginPage": (context) => (),
+        "loginPage": (context) => LoginPage(),
         //"signIn": (context) => (),
         //"signUp": (context) => (),
         //"forgotPassword": (context) => (),

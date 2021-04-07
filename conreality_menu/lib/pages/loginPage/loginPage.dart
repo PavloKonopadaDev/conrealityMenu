@@ -20,9 +20,12 @@ class _LoginPageState extends State<LoginPage> {
         }
       },
       child: Scaffold(
+        backgroundColor: Colors.black,
         body: Column(
           children: [
-            
+            Container(
+              child: Image.asset('assets/images/logo/Vector.png')
+            )
           ],
         ),
       ),

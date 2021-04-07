@@ -50,6 +50,7 @@ flutter:
   assets:
     - assets/images/splashScreen.png
     - assets/images/LOGo.png
+    - assets/images/logo/Vector.png
     
   #   - images/a_dot_ham.jpeg
 
