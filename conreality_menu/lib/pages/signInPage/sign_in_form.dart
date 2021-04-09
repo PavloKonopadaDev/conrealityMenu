@@ -2,17 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SignInForm extends StatefulWidget {
-  final Function(
-    String email,
-    String paswword,
-  ) signIn;
-  final String email;
-  final String password;
-  const SignInForm({
-    this.signIn,
-    this.email,
-    this.password,
-  });
+  
   @override
   _SignInFormState createState() => _SignInFormState();
 }
@@ -77,8 +67,8 @@ class _SignInFormState extends State<SignInForm> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        height: ScreenUtil().setHeight(500),
-                        width: ScreenUtil().setWidth(500),
+                        height: ScreenUtil().setHeight(300),
+                        width: ScreenUtil().setWidth(300),
                         child: Image.asset(
                           'assets/images/splashScreen.png',
                         ),
@@ -90,6 +80,9 @@ class _SignInFormState extends State<SignInForm> {
                       Divider(),
                       _buildPassword(),
                       _buildSignInButton(),
+                      SizedBox(
+                        height: ScreenUtil().setHeight(100),
+                      ),
                       _buildForgotPasswordButton(),
                     ],
                   ),
@@ -104,8 +97,8 @@ class _SignInFormState extends State<SignInForm> {
 
   Widget _buildEmail() {
     return Container(
-      height: ScreenUtil().setHeight(130),
-      width: ScreenUtil().setWidth(530),
+      height: ScreenUtil().setHeight(75),
+      width: ScreenUtil().setWidth(270),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(
@@ -122,13 +115,13 @@ class _SignInFormState extends State<SignInForm> {
           },
           decoration: InputDecoration(
             contentPadding: EdgeInsets.all(20),
-            errorStyle: TextStyle(fontSize: 15, height: 0.05),
+            errorStyle: TextStyle(fontSize: ScreenUtil().setSp(15), height: 0.05),
             border: InputBorder.none,
             hintText: "E-mail",
             hintStyle: TextStyle(
               fontWeight: FontWeight.w900,
               color: Color(0xff4d606f),
-              fontSize: ScreenUtil().setSp(32),
+              fontSize: ScreenUtil().setSp(16),
             ),
           ),
           validator: (value) {
@@ -143,8 +136,8 @@ class _SignInFormState extends State<SignInForm> {
 
   Widget _buildPassword() {
     return Container(
-      height: ScreenUtil().setHeight(130),
-      width: ScreenUtil().setWidth(530),
+      height: ScreenUtil().setHeight(75),
+      width: ScreenUtil().setWidth(270),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(
@@ -162,13 +155,14 @@ class _SignInFormState extends State<SignInForm> {
         },
         decoration: InputDecoration(
           contentPadding: EdgeInsets.all(20),
-          errorStyle: TextStyle(fontSize: 15, height: 0.05),
+          
+          errorStyle: TextStyle(fontSize: ScreenUtil().setSp(15), height: 0.05),
           border: InputBorder.none,
           hintText: "Password",
           hintStyle: TextStyle(
             fontWeight: FontWeight.w900,
             color: Color(0xff4d606f),
-            fontSize: ScreenUtil().setSp(32),
+            fontSize: ScreenUtil().setSp(16),
           ),
           suffixIcon: IconButton(
             icon: Icon(
@@ -191,8 +185,8 @@ class _SignInFormState extends State<SignInForm> {
 
   Widget _buildSignInButton() {
     return Container(
-      height: ScreenUtil().setHeight(135),
-      width: ScreenUtil().setWidth(530),
+      height: ScreenUtil().setHeight(70),
+      width: ScreenUtil().setWidth(270),
       padding: EdgeInsets.only(top: 20),
       child: RaisedButton(
         color: Colors.red[700],
@@ -201,7 +195,7 @@ class _SignInFormState extends State<SignInForm> {
           style: TextStyle(
             color: Colors.cyan,
             fontWeight: FontWeight.w900,
-            fontSize: ScreenUtil().setSp(32),
+            fontSize: ScreenUtil().setSp(16),
           ),
         ),
         shape: RoundedRectangleBorder(
@@ -209,11 +203,11 @@ class _SignInFormState extends State<SignInForm> {
         ),
         onPressed: () {
           if (_formkey.currentState.validate()) {
-            widget.signIn(
-              _emailController.text,
-              _passwordController.text,
-            );
-            // Keys.navKey.currentState.pushNamed("/home");
+            return Navigator.of(context)
+                                .popAndPushNamed('mainMenu');
+            
+         
+
           }
         },
       ),
@@ -233,7 +227,7 @@ class _SignInFormState extends State<SignInForm> {
             height: 1.3,
             color: Colors.grey,
             fontWeight: FontWeight.w400,
-            fontSize: ScreenUtil().setSp(27),
+            fontSize: ScreenUtil().setSp(20),
           ),
         ),
       ),
