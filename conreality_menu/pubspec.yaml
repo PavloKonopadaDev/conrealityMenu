@@ -50,7 +50,10 @@ flutter:
   assets:
     - assets/images/splashScreen.png
     - assets/images/LOGo.png
-    
+    - assets/images/logo/Vector.png
+    - assets/images/logo/conreality.png
+    - assets/images/logo/play_with_us.png
+    - assets/images/вся статистика.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
